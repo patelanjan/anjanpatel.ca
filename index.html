@@ -1,105 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site In Progress</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        body {
-            background-color: #ffffff;
-            color: #1a1a1a;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            overflow: hidden;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anjan Patel | In Progress</title>
+  <style>
+    :root {
+      --bg-gradient: linear-gradient(to bottom right, #1e1e1f, #121212);
+      --glass-bg: #1e1e1f;
+      --border-color: #383838;
+      --accent: #f3bc4c; /* The classic vCard gold/yellow accent */
+      --text-main: #fafafa;
+      --text-dim: #d6d6d6;
+    }
 
-        .container {
-            text-align: center;
-            padding: 40px;
-            max-width: 400px;
-        }
+    body {
+      background: #121212;
+      color: var(--text-main);
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
 
-        /* Animated Gear Icon */
-        .icon-container {
-            margin-bottom: 25px;
-        }
+    .main-container {
+      width: 90%;
+      max-width: 950px;
+      display: flex;
+      gap: 25px;
+      flex-direction: column;
+    }
 
-        .fa-gear {
-            font-size: 60px;
-            color: #2563eb; 
-            animation: spin 4s linear infinite;
-        }
+    @media (min-width: 1024px) {
+      .main-container { flex-direction: row; align-items: stretch; }
+    }
 
-        @keyframes spin {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
+    /* Left Sidebar Style */
+    .sidebar {
+      background: var(--glass-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      padding: 30px;
+      flex: 1;
+      text-align: center;
+    }
 
-        .status-tag {
-            background: #f1f5f9;
-            color: #475569;
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            border: 1px solid #e2e8f0;
-            display: inline-block;
-            margin-bottom: 20px;
-        }
+    .avatar-box {
+      background: #2b2b2c;
+      width: 120px;
+      height: 120px;
+      border-radius: 20px;
+      margin: 0 auto 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-        h1 {
-            font-size: 1.8rem;
-            margin: 0 0 12px 0;
-            font-weight: 600;
-            color: #0f172a;
-        }
+    .avatar-box i { font-size: 50px; color: var(--accent); }
 
-        p {
-            color: #64748b;
-            font-size: 1rem;
-            margin-bottom: 40px;
-            line-height: 1.5;
-        }
+    .name { font-size: 1.5rem; font-weight: 600; margin: 15px 0; }
 
-        .contact-box {
-            border-top: 1px solid #f1f5f9;
-            padding-top: 30px;
-        }
+    .title-tag {
+      background: #2b2b2c;
+      font-size: 0.75rem;
+      padding: 5px 15px;
+      border-radius: 8px;
+      color: var(--text-dim);
+    }
 
-        .email-link {
-            color: #2563eb;
-            text-decoration: none;
-            font-size: 1rem;
-            font-weight: 600;
-        }
+    /* Right Content Area */
+    .content-card {
+      background: var(--glass-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      padding: 40px;
+      flex: 3;
+      position: relative;
+    }
 
-        .email-link:hover {
-            text-decoration: underline;
-        }
-    </style>
+    .header-text {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+      position: relative;
+      padding-bottom: 15px;
+    }
+
+    .header-text::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40px;
+      height: 5px;
+      background: var(--accent);
+      border-radius: 3px;
+    }
+
+    .status-msg {
+      color: var(--text-dim);
+      line-height: 1.8;
+      margin-bottom: 30px;
+    }
+
+    .contact-list {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .icon-box {
+      background: linear-gradient(to bottom right, #383838, #1e1e1f);
+      width: 45px;
+      height: 45px;
+      border-radius: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: var(--accent);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .contact-link {
+      color: var(--text-main);
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .contact-link:hover { color: var(--accent); }
+
+    .label { color: var(--text-dim); font-size: 0.7rem; text-transform: uppercase; display: block; }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-<div class="container">
-    <div class="icon-container">
-        <i class="fa-solid fa-gear"></i>
-    </div>
+  <div class="main-container">
     
-    <div class="status-tag">In Progress</div>
-    <h1>Site Under Process</h1>
-    <p>This personal website is currently being updated. Please check back soon.</p>
-    
-    <div class="contact-box">
-        <a href="mailto:anjan@anjanpatel.ca" class="email-link">anjan@anjanpatel.ca</a>
-    </div>
-</div>
+    <aside class="sidebar">
+      <div class="avatar-box">
+        <i class="fa-solid fa-user-gear"></i>
+      </div>
+      <div class="name">Anjan Patel</div>
+      <span class="title-tag">Coming Soon</span>
+    </aside>
+
+    <main class="content-card">
+      <h1 class="header-text">Under Process</h1>
+      
+      <p class="status-msg">
+        The personal website is currently under development to provide a better user experience. 
+        Updates are being deployed to the digital infrastructure.
+      </p>
+
+      <div class="contact-list">
+        <div class="contact-item">
+          <div class="icon-box"><i class="fa-solid fa-envelope"></i></div>
+          <div>
+            <span class="label">Email</span>
+            <a href="mailto:anjan@anjanpatel.ca" class="contact-link">anjan@anjanpatel.ca</a>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="icon-box"><i class="fa-solid fa-location-dot"></i></div>
+          <div>
+            <span class="label">Location</span>
+            <span class="contact-link">Edmonton, AB</span>
+          </div>
+        </div>
+      </div>
+    </main>
+
+  </div>
 
 </body>
 </html>
