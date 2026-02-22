@@ -50,7 +50,7 @@
             font-weight: 700;
         }
 
-        /* Experience & Education Items */
+        /* Experience Entry */
         .entry { margin-bottom: 30px; position: relative; padding-left: 20px; border-left: 2px solid #eee; }
         .entry-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 5px; flex-wrap: wrap; }
         .entry-title { font-size: 1.2rem; font-weight: 700; color: var(--primary); }
@@ -68,95 +68,3 @@
             font-weight: 600; 
             border: 1px solid #e0e0e0;
             transition: 0.3s;
-        }
-        .skill-box:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-3px); }
-
-        footer { text-align: center; padding: 40px 20px; color: #888; font-size: 0.9rem; }
-
-        /* Mobile Adjustments */
-        @media (max-width: 600px) {
-            .wrapper { margin: 0 auto; border-radius: 0; padding: 25px; }
-            header h1 { font-size: 1.8rem; }
-            .entry-header { flex-direction: column; }
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <div class="profile-container">
-            <img src="anjan.jpg" alt="Anjan Patel" class="profile-img">
-        </div>
-        <h1>Anjan Patel</h1>
-        <p>Mechanical Engineering Technologist</p>
-        
-        <div class="social-links">
-            <a href="mailto:anjan@anjanpatel.ca" title="Email"><i class="fas fa-envelope"></i></a>
-            <a href="https://linkedin.com/in/anjanpatel" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="https://x.com/anjanpatel_" target="_blank" title="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
-        </div>
-    </header>
-
-    <div class="wrapper">
-        <section id="summary">
-            <h2 class="section-title">Professional Summary</h2>
-            <p class="entry-desc">
-                Results-oriented Mechanical Engineering Technologist with extensive experience in the Alberta energy and manufacturing sectors. 
-                Proven expertise in technical documentation, QA/QC inspections, and CAD optimization. Dedicated to manufacturing precision 
-                and engineering reliability in high-pressure industrial environments.
-            </p>
-        </section>
-
-        <section id="experience">
-            <h2 class="section-title">Work Experience</h2>
-            
-            <div class="entry">
-                <div class="entry-header">
-                    <h3 class="entry-title">Mechanical Engineering Technologist</h3>
-                    <span class="entry-date">2023 — 2024</span>
-                </div>
-                <span class="entry-location">UnityRig Equipment Inc. | Nisku, AB</span>
-                <p class="entry-desc">Streamlined manufacturing workflows for industrial oilfield equipment. Managed technical documentation and maintained strict quality control standards for heavy machinery production.</p>
-            </div>
-
-            <div class="entry">
-                <div class="entry-header">
-                    <h3 class="entry-title">Mechanical Engineering Technologist</h3>
-                    <span class="entry-date">Previous Role</span>
-                </div>
-                <span class="entry-location">Kings Energy Services | Edmonton, AB</span>
-                <p class="entry-desc">Coordinated mechanical system production and documentation accuracy. Ensured all equipment met rigorous industry safety codes and engineering specifications.</p>
-            </div>
-        </section>
-
-        <section id="education">
-            <h2 class="section-title">Education</h2>
-            <div class="entry">
-                <div class="entry-header">
-                    <h3 class="entry-title">Mechanical Engineering Technology</h3>
-                    <span class="entry-date">Completed</span>
-                </div>
-                <span class="entry-location">Engineering Technologist Diploma</span>
-                <p class="entry-desc">Specialized training in mechanical design, manufacturing processes, and materials science.</p>
-            </div>
-        </section>
-
-        <section id="skills">
-            <h2 class="section-title">Technical Expertise</h2>
-            <div class="skills-grid">
-                <div class="skill-box">AutoCAD</div>
-                <div class="skill-box">SolidWorks</div>
-                <div class="skill-box">QA/QC Inspections</div>
-                <div class="skill-box">Business Central ERP</div>
-                <div class="skill-box">Project Coordination</div>
-                <div class="skill-box">Technical Reporting</div>
-            </div>
-        </section>
-    </div>
-
-    <footer>
-        © 2026 Anjan Patel | Edmonton, Alberta | Mechanical Engineering Technologist
-    </footer>
-
-</body>
-</html>
