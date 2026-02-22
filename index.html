@@ -7,117 +7,103 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary: #1a1a1a;
+            --bg: #ffffff;
+            --text: #2d3436;
             --accent: #3498db;
-            --bg-light: #f4f7f6;
-            --text-main: #333;
-            --white: #ffffff;
+            --light-bg: #f8f9fa;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Segoe UI', Tahoma, sans-serif; background: var(--bg-light); color: var(--text-main); line-height: 1.6; }
+        body { font-family: 'Inter', -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
 
-        header { background: var(--primary); color: var(--white); padding: 80px 20px; text-align: center; }
-        .profile-img { 
-            width: 150px; height: 150px; border-radius: 50%; border: 4px solid var(--accent); 
-            object-fit: cover; background: #fff; margin-bottom: 20px;
-        }
-        header h1 { font-size: 2.5rem; margin-bottom: 10px; }
-        header p { font-size: 1.1rem; color: var(--accent); font-weight: 600; text-transform: uppercase; letter-spacing: 2px; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 80px 40px; }
 
-        .social-links { margin-top: 20px; display: flex; justify-content: center; gap: 20px; }
-        .social-links a { color: #fff; font-size: 1.4rem; transition: 0.3s; }
-        .social-links a:hover { color: var(--accent); }
+        /* Top Profile Section */
+        .profile-header { display: flex; align-items: center; gap: 40px; margin-bottom: 80px; }
+        .profile-img { width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 5px solid var(--light-bg); }
+        .profile-info h1 { font-size: 3rem; font-weight: 800; line-height: 1.1; margin-bottom: 10px; color: #1a1a1a; }
+        .profile-info p { font-size: 1.2rem; color: var(--accent); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
 
-        .wrapper { max-width: 900px; margin: -40px auto 40px; background: var(--white); padding: 40px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+        /* Sections */
+        section { margin-bottom: 60px; }
+        h2 { font-size: 1.5rem; font-weight: 700; margin-bottom: 30px; display: flex; align-items: center; gap: 15px; }
+        h2::after { content: ""; height: 2px; background: var(--light-bg); flex: 1; }
+
+        .about-text { font-size: 1.1rem; color: #636e72; max-width: 800px; }
+
+        /* Experience Items */
+        .exp-item { margin-bottom: 40px; }
+        .exp-header { display: flex; justify-content: space-between; margin-bottom: 8px; }
+        .job-title { font-size: 1.25rem; font-weight: 700; color: #1a1a1a; }
+        .exp-date { color: var(--accent); font-weight: 600; font-size: 0.9rem; }
+        .company { font-weight: 600; color: #636e72; display: block; margin-bottom: 12px; }
         
-        section { margin-bottom: 40px; }
-        .section-title { 
-            font-size: 1.4rem; color: var(--primary); border-bottom: 3px solid var(--accent); 
-            display: inline-block; margin-bottom: 25px; padding-bottom: 5px; font-weight: 700;
+        ul { list-style: none; }
+        ul li { margin-bottom: 8px; position: relative; padding-left: 20px; color: #636e72; }
+        ul li::before { content: "→"; position: absolute; left: 0; color: var(--accent); }
+
+        /* Skills Grid */
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; }
+        .skill { background: var(--light-bg); padding: 12px 20px; border-radius: 6px; font-weight: 600; font-size: 0.95rem; text-align: center; border: 1px solid #eee; }
+
+        /* Footer / Links */
+        .social { margin-top: 30px; display: flex; gap: 20px; }
+        .social a { color: var(--text); font-size: 1.5rem; transition: 0.2s; }
+        .social a:hover { color: var(--accent); }
+
+        @media (max-width: 768px) {
+            .profile-header { flex-direction: column; text-align: center; }
+            .profile-info h1 { font-size: 2.2rem; }
+            .container { padding: 40px 20px; }
         }
-
-        .entry { margin-bottom: 30px; padding-left: 20px; border-left: 2px solid #eee; }
-        .entry-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; }
-        .entry-title { font-size: 1.2rem; font-weight: 700; color: var(--primary); }
-        .entry-date { font-weight: 600; color: var(--accent); font-size: 0.9rem; }
-        .entry-location { display: block; color: #777; font-size: 0.95rem; margin-bottom: 10px; font-style: italic; }
-        
-        .skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 15px; }
-        .skill-box { background: var(--bg-light); padding: 10px; border-radius: 5px; text-align: center; font-weight: 600; border: 1px solid #e0e0e0; }
-
-        footer { text-align: center; padding: 40px 20px; color: #888; font-size: 0.9rem; }
-        @media (max-width: 600px) { .wrapper { margin: 0 auto; border-radius: 0; padding: 25px; } }
     </style>
 </head>
 <body>
 
-    <header>
-        <img src="anjan.jpg" alt="Anjan Patel" class="profile-img">
-        <h1>Anjan Patel</h1>
-        <p>Mechanical Engineering Technologist</p>
-        <div class="social-links">
-            <a href="mailto:anjan@anjanpatel.ca"><i class="fas fa-envelope"></i></a>
-            <a href="https://www.linkedin.com/in/patelanjan" target="_blank"><i class="fab fa-linkedin"></i></a>
-        </div>
-    </header>
+    <div class="container">
+        <header class="profile-header">
+            <img src="anjan.jpg" alt="Anjan Patel" class="profile-img">
+            <div class="profile-info">
+                <h1>Anjan Patel</h1>
+                <p>Mechanical Engineering Technologist</p>
+                <div class="social">
+                    <a href="mailto:anjan@anjanpatel.ca"><i class="fas fa-envelope"></i></a>
+                    <a href="https://linkedin.com/in/patelanjan" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://x.com/anjanpatel_" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                </div>
+            </div>
+        </header>
 
-    <div class="wrapper">
         <section>
-            <h2 class="section-title">Professional Summary</h2>
-            <p>Detail-oriented Mechanical Engineering Technologist with experience in Alberta's oil and gas sectors. Specialized in mechanical design (SolidWorks/AutoCAD), pressure equipment inspection (QA/QC), and maintaining regulatory compliance (ASME, CSA, API).</p>
+            <h2>About</h2>
+            <p class="about-text">
+                Detail-oriented Mechanical Engineering Technologist based in Edmonton, AB. 
+                Over 4 years of experience in the oil & gas and industrial sectors, specializing in mechanical design, 
+                pressure equipment inspection (QA/QC), and maintaining regulatory compliance (ASME, CSA, API).
+            </p>
         </section>
 
-        <section id="experience">
-            <h2 class="section-title">Experience</h2>
+        <section>
+            <h2>Experience</h2>
             
-            <div class="entry">
-                <div class="entry-header">
-                    <h3 class="entry-title">Mechanical Engineering Technologist</h3>
-                    <span class="entry-date">Oct 2024 — Present</span>
+            <div class="exp-item">
+                <div class="exp-header">
+                    <span class="job-title">Mechanical Engineering Technologist</span>
+                    <span class="exp-date">Oct 2024 — Present</span>
                 </div>
-                <span class="entry-location">Kings Energy Services Ltd | Nisku, AB</span>
+                <span class="company">Kings Energy Services Ltd | Nisku, AB</span>
                 <ul>
-                    <li>Perform inspections and testing on 200+ pressure units monthly.</li>
-                    <li>Develop 2D/3D models and P&IDs to support fabrication.</li>
-                    <li>Manage NCRs and update QMS/HSE documentation for audit readiness.</li>
+                    <li>Perform inspections and testing on ~200 pressure equipment units monthly.</li>
+                    <li>Develop 2D/3D models, P&IDs, and fabrication drawings.</li>
+                    <li>Manage QMS/HSE documentation and manage NCR closures.</li>
                 </ul>
             </div>
 
-            <div class="entry">
-                <div class="entry-header">
-                    <h3 class="entry-title">Mechanical Engineering Technologist</h3>
-                    <span class="entry-date">Feb 2023 — Oct 2024</span>
+            <div class="exp-item">
+                <div class="exp-header">
+                    <span class="job-title">Mechanical Engineering Technologist</span>
+                    <span class="exp-date">Feb 2023 — Oct 2024</span>
                 </div>
-                <span class="entry-location">UnityRig Equipment Inc. | Nisku, AB</span>
+                <span class="company">UnityRig Equipment Inc. | Nisku, AB</span>
                 <ul>
-                    <li>Streamlined technical documentation for multiple fabrication projects.</li>
-                    <li>Executed high-precision measurements ensuring 100% component compliance.</li>
-                </ul>
-            </div>
-        </section>
-
-        <section id="education">
-            <h2 class="section-title">Education</h2>
-            <div class="entry">
-                <div class="entry-header">
-                    <h3 class="entry-title">Bachelor of Engineering - Mechanical</h3>
-                </div>
-                <span class="entry-location">Gujarat Technological University | India</span>
-            </div>
-        </section>
-
-        <section id="skills">
-            <h2 class="section-title">Technical Expertise</h2>
-            <div class="skills-grid">
-                <div class="skill-box">SolidWorks & AutoCAD</div>
-                <div class="skill-box">QA/QC Inspections</div>
-                <div class="skill-box">Pressure Equipment</div>
-                <div class="skill-box">ERP Systems</div>
-                <div class="skill-box">NCR Management</div>
-                <div class="skill-box">Compliance (ASME/API)</div>
-            </div>
-        </section>
-    </div>
-
-    <footer>©
+                    <li>
