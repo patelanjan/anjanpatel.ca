@@ -22,8 +22,8 @@
             padding: 40px;
             border-radius: 20px;
             box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+            max-width: 350px;
         }
-        /* The Spinning Gear Effect */
         .gear-icon {
             font-size: 80px;
             color: #3498db;
@@ -33,25 +33,28 @@
         @keyframes spin {
             100% { transform: rotate(360deg); }
         }
-        h2 {
-            font-weight: 600;
-            margin-bottom: 10px;
-            letter-spacing: 1px;
-        }
+        h2 { font-weight: 600; margin-bottom: 10px; letter-spacing: 1px; }
         .email-link {
             display: inline-block;
             margin-top: 20px;
-            padding: 10px 20px;
+            padding: 12px 24px;
             background-color: #3498db;
-            color: white;
+            color: white !important;
             text-decoration: none;
             border-radius: 50px;
             font-weight: 500;
             transition: 0.3s;
+            cursor: pointer;
         }
         .email-link:hover {
             background-color: #2980b9;
             transform: translateY(-2px);
+        }
+        .email-text {
+            display: block;
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: #888;
         }
     </style>
 </head>
@@ -59,14 +62,15 @@
 
     <div class="card">
         <i class="fa-solid fa-gear gear-icon"></i>
-        
         <h2>UNDER MAINTENANCE</h2>
         <p>The site is being updated. Please check back soon.</p>
 
         <a href="mailto:anjan@anjanpatel.ca" class="email-link">
             <i class="fa-regular fa-envelope"></i> Contact Support
         </a>
+
+        <span class="email-text">anjan@anjanpatel.ca</span>
     </div>
 
 </body>
-</html>
+</html>\
