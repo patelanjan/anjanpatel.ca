@@ -15,66 +15,61 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            color: #444;
         }
         .card {
             background: #ffffff;
-            padding: 40px;
+            padding: 50px;
             border-radius: 20px;
             box-shadow: 0 15px 35px rgba(0,0,0,0.05);
-            max-width: 350px;
+            max-width: 380px;
         }
+        /* Spinning Gear Animation */
         .gear-icon {
-            font-size: 80px;
+            font-size: 70px;
             color: #3498db;
-            margin-bottom: 25px;
-            animation: spin 4s linear infinite;
-        }
-        @keyframes spin { 100% { transform: rotate(360deg); } }
-        h2 { font-weight: 600; margin-bottom: 10px; letter-spacing: 1px; }
-        p { color: #666; margin-bottom: 30px; }
-        
-        .email-button {
+            margin-bottom: 20px;
+            animation: spin 3s linear infinite;
             display: inline-block;
-            padding: 12px 24px;
+        }
+        @keyframes spin {
+            100% { transform: rotate(360deg); }
+        }
+        h2 { font-weight: 600; color: #333; margin-bottom: 10px; }
+        p { color: #777; margin-bottom: 30px; font-size: 1rem; }
+        
+        .contact-btn {
             background-color: #3498db;
             color: white !important;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 500;
-            transition: 0.3s;
-            cursor: pointer;
+            padding: 14px 28px;
             border: none;
-            outline: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
         }
-        .email-button:hover {
+        .contact-btn:hover {
             background-color: #2980b9;
             transform: translateY(-2px);
         }
+        .contact-btn i { margin-right: 8px; }
     </style>
 </head>
 <body>
 
     <div class="card">
-        <i class="fa-solid fa-gear gear-icon"></i>
-        <h2>UNDER MAINTENANCE</h2>
-        <p>The site is being updated. Please check back soon.</p>
+        <i class="fa-solid fa-cog gear-icon"></i>
+        <h2>Site Maintenance</h2>
+        <p>We are currently updating our systems. Please check back soon.</p>
 
-        <button class="email-button" onclick="contactSupport()">
-            <i class="fa-regular fa-envelope"></i> Contact Support
-        </button>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=anjan@anjanpatel.ca&su=Inquiry" 
+           target="_blank" 
+           class="contact-btn">
+            <i class="fa-solid fa-envelope"></i> Contact Support
+        </a>
     </div>
-
-    <script>
-        function contactSupport() {
-            const email = 'anjan@anjanpatel.ca';
-            // 1. Try to open the email app
-            window.location.href = 'mailto:' + email;
-            
-            // 2. Show the email in a popup so they can see it if the app doesn't open
-            alert('To contact us, please email: ' + email);
-        }
-    </script>
 
 </body>
 </html>
