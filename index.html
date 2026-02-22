@@ -3,71 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anjan Patel | Mechanical Engineer</title>
+    <title>Anjan Patel | Mechanical Engineering Technologist</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto; padding: 20px; background-color: #f4f7f6; }
-        header { background: #1a3a5f; color: white; padding: 3rem 2rem; text-align: center; border-radius: 8px; margin-bottom: 30px; }
-        h1 { margin: 0; font-size: 2.5rem; letter-spacing: 1px; }
-        .tagline { font-size: 1.2rem; opacity: 0.9; margin-top: 10px; }
-        .container { background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-        h2 { color: #1a3a5f; border-bottom: 2px solid #eef2f3; padding-bottom: 10px; margin-top: 30px; }
-        .contact-info { display: flex; justify-content: space-around; flex-wrap: wrap; margin-bottom: 30px; background: #eef2f3; padding: 15px; border-radius: 5px; font-weight: 500; }
-        .experience-item { margin-bottom: 25px; padding-left: 15px; border-left: 4px solid #3498db; }
-        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-        footer { text-align: center; margin-top: 50px; color: #7f8c8d; font-size: 0.9rem; border-top: 1px solid #ddd; padding-top: 20px; }
-    </style>
-</head>
-<body>
+        :root {
+            --primary-dark: #1a2a3a;
+            --accent-blue: #3498db;
+            --text-main: #333;
+            --bg-light: #f8f9fa;
+        }
 
-<header>
-    <h1>Anjan Patel</h1>
-    <p class="tagline">Mechanical Engineer | Manufacturing & Oilfield Specialist</p>
-</header>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
 
-<div class="container">
-    <div class="contact-info">
-        <span>📍 Edmonton, AB</span>
-        <span>✉️ anjan@anjanpatel.ca</span>
-        <span>🏗️ Mechanical Engineering Technologist</span>
-    </div>
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            background-color: var(--bg-light);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
 
-    <h2>Professional Profile</h2>
-    <p>Mechanical Engineer based in <strong>Edmonton, Alberta</strong>, with expertise in manufacturing, natural gas, and oilfield equipment. Skilled in project coordination, process optimization, and <strong>Microsoft Dynamics 365 Business Central</strong>.</p>
+        /* Sidebar Styling */
+        .sidebar {
+            width: 320px;
+            background-color: var(--primary-dark);
+            color: white;
+            height: 100vh;
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px 20px;
+            text-align: center;
+        }
 
-    <h2>Expertise & Skills</h2>
-    <div class="skills-grid">
-        <div>
-            <strong>Technical Skills</strong>
-            <ul>
-                <li>Mechanical Systems Design</li>
-                <li>Oilfield Equipment & Rig Tools</li>
-                <li>Manufacturing Processes</li>
-            </ul>
-        </div>
-        <div>
-            <strong>Professional Strengths</strong>
-            <ul>
-                <li>Project Management (PMP Candidate)</li>
-                <li>Quality Assurance (QA/QC)</li>
-                <li>ERP Systems (Business Central)</li>
-            </ul>
-        </div>
-    </div>
+        .profile-img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border: 4px solid var(--accent-blue);
+            margin-bottom: 20px;
+            object-fit: cover;
+            background-color: #eee;
+        }
 
-    <h2>Core Experience</h2>
-    <div class="experience-item">
-        <strong>Engineering & Manufacturing</strong>
-        <p>Proven track record in the Alberta energy sector, including key contributions at <strong>UnityRig Equipment Inc.</strong> and <strong>Kings Energy Services</strong>.</p>
-    </div>
+        .sidebar h2 {
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+        }
 
-    <p style="text-align: center; color: #666; margin-top: 40px;">
-        <em>Full portfolio and project documentation currently being updated.</em>
-    </p>
-</div>
+        .sidebar p {
+            font-size: 0.9rem;
+            color: #bdc3c7;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
 
-<footer>
-    &copy; 2026 Anjan Patel | Mechanical Engineer | Edmonton, Alberta
-</footer>
+        .contact-list {
+            width: 100%;
+            list-style: none;
+            text-align: left;
+            padding-left: 20px;
+        }
 
-</body>
-</html>
+        .contact-list li {
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-list i {
+            margin-right: 15px;
+            color: var(--accent-blue);
+            width: 20px;
+        }
+
+        .social-links {
+            margin-top: auto;
+            display: flex;
+            gap: 20px;
+            font-size: 1.5rem;
+        }
+
+        .social-links a {
+            color: white;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover { color: var(--accent-blue); }
+
+        /* Main Content Styling */
+        .main-content {
+            margin-left: 320px;
+            padding: 80px 100px;
+            width: 100%;
+        }
+
+        section { margin-bottom: 60px; max-width: 800px; }
+
+        h1 { font-size: 3.5rem; color: var(--primary-dark); margin-bottom: 10px; }
+        
+        h3 {
+            font-size: 1.5rem;
+            color: var(--accent-blue);
+            margin-bottom: 25px;
+            border-bottom: 2px
