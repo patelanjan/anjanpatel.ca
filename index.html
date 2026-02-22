@@ -3,49 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maintenance | Anjan Patel</title>
+    <title>Under Maintenance</title>
     <style>
-        body {
+        body, html {
             margin: 0;
-            height: 100vh;
+            padding: 0;
+            height: 100%;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            color: white;
+            /* Background image with dark overlay */
+            background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), 
+                        url('./engback.jpg') no-repeat center center fixed;
+            background-size: cover;
             display: flex;
             justify-content: center;
             align-items: center;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('./engback.jpg') center/cover;
-            color: white;
-            font-family: sans-serif;
             text-align: center;
         }
-        .box {
-            background: rgba(255,255,255,0.1);
+
+        .container {
             padding: 40px;
-            border-radius: 15px;
-            backdrop-filter: blur(5px);
-            border: 1px solid rgba(255,255,255,0.2);
+            max-width: 400px;
         }
+
+        .logo {
+            width: 180px; /* Adjusted for better visibility */
+            margin-bottom: 30px;
+            filter: drop-shadow(0 0 10px rgba(255,255,255,0.2));
+        }
+
+        h1 { 
+            font-size: 2rem; 
+            letter-spacing: 1px;
+            margin-bottom: 30px; 
+            text-transform: uppercase;
+        }
+
         .btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 15px 30px;
-            background: #007bff;
+            padding: 12px 30px;
+            background-color: #007bff;
             color: white;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 4px;
             font-weight: bold;
-            transition: transform 0.2s, background 0.2s;
+            transition: 0.3s;
+            display: inline-block;
         }
-        .btn:hover {
-            background: #0056b3;
-            transform: scale(1.05);
+
+        .btn:hover { 
+            background-color: #0056b3; 
         }
+
     </style>
 </head>
 <body>
-    <div class="box">
-        <img src="./logo.png" alt="Logo" style="width:120px; margin-bottom:20px;">
-        <h1>Site Under Maintenance</h1>
-        <p>I'm currently updating my portfolio. Please reach out via email.</p>
-        <a href="mailto:admin@anjanpatel.ca" target="_blank" class="btn">Email Anjan Directly</a>
+
+    <div class="container">
+        <img src="./logo.png" alt="Logo" class="logo">
+        
+        <h1>Under Maintenance</h1>
+        
+        <a href="mailto:support@anjanpatel.ca" class="btn">Contact Us</a>
     </div>
+
 </body>
 </html>
