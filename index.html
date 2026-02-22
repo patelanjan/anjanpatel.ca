@@ -6,49 +6,54 @@
     <title>Anjan Patel | Mechanical Engineering Technologist</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        :root { --sidebar-bg: #121212; --accent: #3498db; --text-light: #ffffff; --text-gray: #a0a0a0; }
+        :root {
+            --sidebar-bg: #1a1a1a;
+            --accent: #3498db;
+            --text-light: #ffffff;
+            --text-gray: #bdc3c7;
+        }
+
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Inter', -apple-system, sans-serif; display: flex; color: #333; min-height: 100vh; }
-        .sidebar { width: 300px; background: var(--sidebar-bg); height: 100vh; position: fixed; color: var(--text-light); padding: 60px 30px; display: flex; flex-direction: column; align-items: center; border-right: 1px solid #222; }
-        .profile-pic { width: 150px; height: 150px; border-radius: 50%; border: 3px solid #333; margin-bottom: 25px; object-fit: cover; }
-        .sidebar h2 { font-size: 1.5rem; font-weight: 700; margin-bottom: 5px; }
-        .sidebar .title-tag { color: var(--text-gray); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 40px; }
+        body { font-family: 'Inter', -apple-system, sans-serif; display: flex; color: #333; min-height: 100vh; background: #fff; }
+
+        /* Professional Sidebar */
+        .sidebar {
+            width: 300px;
+            background: var(--sidebar-bg);
+            height: 100vh;
+            position: fixed;
+            color: var(--text-light);
+            padding: 60px 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-right: 1px solid #000;
+        }
+
+        .profile-pic {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border: 3px solid var(--accent);
+            margin-bottom: 25px;
+            object-fit: cover;
+        }
+
+        .sidebar h2 { font-size: 1.5rem; font-weight: 700; margin-bottom: 5px; text-align: center; }
+        .sidebar .title-tag { color: var(--accent); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 40px; text-align: center; }
+
         .nav-info { list-style: none; width: 100%; }
-        .nav-info li { margin-bottom: 20px; font-size: 0.9rem; padding-bottom: 12px; border-bottom: 1px solid #1a1a1a; display: flex; align-items: center; }
+        .nav-info li { margin-bottom: 20px; font-size: 0.9rem; padding-bottom: 12px; border-bottom: 1px solid #2c3e50; display: flex; align-items: center; }
         .nav-info i { color: var(--accent); margin-right: 15px; width: 20px; text-align: center; }
-        .content { margin-left: 300px; padding: 100px 80px; width: 100%; max-width: 1200px; }
-        .hero h1 { font-size: 4rem; line-height: 1.1; margin-bottom: 25px; font-weight: 800; color: #1a1a1a; }
+        .nav-info a { color: inherit; text-decoration: none; transition: 0.3s; }
+        .nav-info a:hover { color: var(--accent); }
+
+        /* Main Content */
+        .content { margin-left: 300px; padding: 80px 60px; width: 100%; max-width: 1000px; }
+        
+        .hero { margin-bottom: 60px; }
+        .hero h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; font-weight: 800; color: #1a1a1a; }
         .hero h1 span { color: var(--accent); }
-        .hero p { font-size: 1.25rem; color: #555; max-width: 700px; line-height: 1.6; margin-bottom: 80px; }
-        .section-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 4px; color: var(--accent); font-weight: 800; margin-bottom: 40px; display: block; }
-        .exp-block { margin-bottom: 50px; border-left: 2px solid #eee; padding-left: 30px; }
-        @media (max-width: 900px) { body { flex-direction: column; } .sidebar { width: 100%; height: auto; position: relative; padding: 40px 20px; } .content { margin-left: 0; padding: 50px 25px; } }
-    </style>
-</head>
-<body>
-    <aside class="sidebar">
-        <img src="anjan.jpg" alt="Anjan Patel" class="profile-pic">
-        <h2>Anjan Patel</h2>
-        <p class="title-tag">Mechanical Technologist</p>
-        <ul class="nav-info">
-            <li><i class="fa-solid fa-location-dot"></i> Edmonton, AB</li>
-            <li><i class="fa-solid fa-envelope"></i> anjan@anjanpatel.ca</li>
-            <li><i class="fa-brands fa-linkedin"></i> <a href="https://linkedin.com/in/anjanpatel" target="_blank" style="color:white; text-decoration:none;">LinkedIn</a></li>
-        </ul>
-    </aside>
-    <main class="content">
-        <section class="hero">
-            <h1>Engineering <br><span>Solutions.</span></h1>
-            <p>Mechanical Engineering Technologist specializing in manufacturing documentation, quality control, and oilfield equipment design in Edmonton and Nisku.</p>
-        </section>
-        <section>
-            <span class="section-label">Experience</span>
-            <div class="exp-block">
-                <h4>Mechanical Engineering Technologist</h4>
-                <p>UnityRig Equipment Inc. & Kings Energy Services</p>
-                <p style="color: #666; margin-top: 10px;">Focused on manufacturing optimization, technical documentation, and quality standards for industrial equipment.</p>
-            </div>
-        </section>
-    </main>
-</body>
-</html>
+        .hero p { font-size: 1.2rem; color: #555; line-height: 1.6; }
+
+        .section-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 4px; color: var(--accent); font-weight: 800; margin-bottom: 30px; display: block; border-bottom: 2px solid #f1f1f
