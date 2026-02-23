@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Under Maintenance</title>
+    <title>Maintenance in Progress</title>
     <style>
         body, html {
             margin: 0;
             padding: 0;
             height: 100%;
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffffff;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -19,58 +19,53 @@
 
         .container {
             text-align: center;
-            padding: 40px;
+            padding: 20px;
+            max-width: 600px;
         }
 
-        /* Animated Engineering Gears */
-        .icon-box {
-            margin-bottom: 40px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 5px;
-        }
-
-        .gear {
-            fill: #adb5bd;
-            animation: spin 5s linear infinite;
-            transform-origin: center;
-        }
-
-        .gear-small {
-            fill: #6c757d;
-            animation: spin-reverse 3s linear infinite;
-            transform-origin: center;
-        }
-
-        @keyframes spin {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-
-        @keyframes spin-reverse {
-            from { transform: rotate(360deg); }
-            to { transform: rotate(0deg); }
+        /* Engineer Working GIF Styling */
+        .engineer-gif {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            margin-bottom: 30px;
+            border-radius: 8px;
         }
 
         h1 {
             font-size: 2.5rem;
             font-weight: 700;
-            margin: 0 0 15px 0;
-            letter-spacing: -0.5px;
+            margin-bottom: 15px;
         }
 
         p {
             font-size: 1.2rem;
-            color: #6c757d;
-            margin: 0;
+            color: #7f8c8d;
             line-height: 1.6;
+            margin: 0;
+        }
+
+        /* Subtle gear detail for the background corner */
+        .decoration {
+            position: fixed;
+            bottom: -50px;
+            right: -50px;
+            opacity: 0.05;
+            width: 300px;
+            pointer-events: none;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="icon-box">
-            <svg class="gear" width="80" height="80" viewBox="0 0 24 24">
-                <path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.5
+        <img src="https://cdn.pixabay.com/animation/2023/04/13/11/04/11-04-12-680_512.gif" 
+             alt="Engineer working on site" 
+             class="engineer-gif">
+
+        <h1>We're Under Maintenance</h1>
+        <p>Our team is currently working on an improved experience.<br>We will be back online shortly!</p>
+    </div>
+
+    <svg class="decoration" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M12,15.5A3.5,3.5 0 0,1 8.5,12A3.5,3.5 0 0,1 12,8.5A3.5,3.5 0 0,1 15.5,12A3.5,3.5 0 0,1 12,15.5M19.43,12.97C19.47,12.65 19.5,12.33 19.5,12C19.5,11.67 19.47,11.34 19.43,11L21.54,9.37C21.73,9.22 21.78,8.95 21.66,8.73L19.66,5.27C19.54,5.05 19.27,4.96 19.05,5.05L16.56,6.05C16.04,5.66 15.5,5.32 14.87,5.07L14.5,2.42C14.46,2.18 14.25,2 14,2H10C9.75,2 9.54,2.18 9.5,2.42L9.13,5.07C8.5,5.32 7.96,5.66 7.44,6.05L4.95,5.05C4.73,4.96 4.46,5.05 4.34,5.27L2.34,8.73C2.21,8.95 2.27,9.22 2.46,9.37L4.57,11C4.53,11.34 4.5,11.67 4.5,12C4.5,12.33 4.53,12.65 4.57,12.97L2.46,14.63C2.27,14.78 2.21,15.05 2.34,15
